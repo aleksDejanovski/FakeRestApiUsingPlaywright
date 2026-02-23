@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import authors from "./dataSet/authors.json";
 
 test("get all authors", async ({ request }) => {
   const response = await request.get("/api/v1/Authors");
@@ -31,4 +32,14 @@ test("create new author", async ({ request }) => {
   expect(responseObject.id).toBe(44);
   expect(responseObject.firstName).toBe("Aleks");
   expect(responseObject.lastName).toBe("Dankovic");
+});
+
+authors.forEach((author) => {
+  test(`create new author using ${author.firstName}`, async ({ request }) => {
+    const response = await request.post("/api/v1/Authors", {
+      data: author,
+    });
+
+    expect(response.status()).toBe(200);
+  });
 });

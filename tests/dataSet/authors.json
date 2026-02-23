@@ -1,0 +1,26 @@
+[
+  {
+    "id": 101,
+    "idBook": 101,
+    "firstName": "Aleks",
+    "lastName": "Dankovic"
+  },
+  {
+    "id": 102,
+    "idBook": 102,
+    "firstName": "Marko",
+    "lastName": "Petrov"
+  },
+  {
+    "id": 103,
+    "idBook": 103,
+    "firstName": "Ivan",
+    "lastName": "Nikolov"
+  },
+  {
+    "id": 104,
+    "idBook": 104,
+    "firstName": "Sara",
+    "lastName": "Jovanova"
+  }
+]
