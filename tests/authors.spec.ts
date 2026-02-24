@@ -43,3 +43,8 @@ authors.forEach((author) => {
     expect(response.status()).toBe(200);
   });
 });
+
+test("deleve specific author", async ({ request }) => {
+  const response = await request.delete("api/v1/Authors/55");
+  expect(response.status()).toBe(200);
+});
